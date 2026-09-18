@@ -1,1 +1,0 @@
-sed -i 's/async deleteAllUserData()/async getCalculatorState() { const data = await getProfileData(); return data.calculatorState || null; }\n  async saveCalculatorState(state: any) { const data = await getProfileData(); data.calculatorState = state; await saveProfileData(data); }\n  async deleteAllUserData()/' src/lib/db.ts
